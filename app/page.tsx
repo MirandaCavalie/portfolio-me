@@ -94,12 +94,14 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-6">
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="pt-24 pb-20 border-b border-gray-100">
-        <h1 className="font-mono font-bold text-3xl sm:text-4xl mb-3">Miranda Cavalie</h1>
-        <p className="font-sans text-base text-gray-700 mb-1">
-          Engineer. I build things end to end and ship them.
-        </p>
-        <p className="font-mono text-sm text-gray-400 mb-8">San Francisco, CA</p>
-        <div className="flex flex-wrap gap-6 font-mono text-sm">
+        <div className="flex items-center gap-8 sm:gap-12">
+          <div className="flex-1 min-w-0">
+            <h1 className="font-mono font-bold text-3xl sm:text-4xl mb-3">Miranda Cavalie</h1>
+            <p className="font-sans text-base text-gray-700 mb-1">
+              Engineer. I build things end to end and ship them.
+            </p>
+            <p className="font-mono text-sm text-gray-400 mb-8">San Francisco, CA</p>
+            <div className="flex flex-wrap gap-6 font-mono text-sm">
           <a
             href="https://github.com/mirandacavalie"
             target="_blank"
@@ -132,6 +134,17 @@ export default function Home() {
             </svg>
             Email
           </a>
+        </div>
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/photo_me.jpeg"
+              alt="Miranda Cavalie"
+              width={200}
+              height={200}
+              className="rounded-full object-cover w-32 h-32 sm:w-48 sm:h-48"
+            />
+          </div>
         </div>
       </section>
 
