@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextResponse } from 'next/server'
 import pool from '@/lib/db'
 import { trendingData } from '@/lib/trending-data'
