@@ -5,7 +5,11 @@
       "Bash(npx create-next-app@14 . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --no-eslint --no-turbopack)",
       "Bash(npm install *)",
       "Bash(npx tsc *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(powershell -Command \"Get-ChildItem -Recurse -Filter '.env*' | Select-Object FullName\")",
+      "PowerShell(Select-String -Path \".env.local\" -Pattern \"ANTHROPIC_API_KEY\" | ForEach-Object { $_.Line.Substring\\(0, 35\\) })",
+      "PowerShell(Select-String -Path \".env.local\" -Pattern \"ANTHROPIC\" | ForEach-Object { '{0}: {1}' -f $_.LineNumber, $_.Line.Substring\\(0, [Math]::Min\\(40, $_.Line.Length\\)\\) })",
+      "PowerShell(Get-Content .env.local | Select-String 'ANTHROPIC' | ForEach-Object { $_.LineNumber.ToString\\(\\) + ': ' + $_.Line.Substring\\(0, [Math]::Min\\(40, $_.Line.Length\\)\\) })"
     ]
   }
 }

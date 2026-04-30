@@ -30,10 +30,7 @@ Python, SQL, Node.js, JavaScript, LangGraph, OpenAI SDK, Anthropic API, FastAPI,
 If asked something not covered above, say: "I don't have that info, but you can reach Miranda at mirandacavalie@gmail.com"`
 
 export async function POST(request: Request) {
-  console.log("Anthropic key prefix:", process.env.ANTHROPIC_API_KEY?.substring(0, 15))
-  console.log("Anthropic key length:", process.env.ANTHROPIC_API_KEY?.length)
-
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.CLAUDE_KEY) {
     return NextResponse.json({ error: 'Chat not configured' }, { status: 503 })
   }
 
@@ -44,10 +41,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Messages required' }, { status: 400 })
     }
 
-    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+    const client = new Anthropic({ apiKey: process.env.CLAUDE_KEY })
 
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-5',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: messages.slice(-10).map((m: { role: string; content: string }) => ({
