@@ -27,6 +27,15 @@ export async function GET() {
       )
     `)
 
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS users (
+        email VARCHAR(255) PRIMARY KEY,
+        name VARCHAR(100),
+        paid BOOLEAN DEFAULT FALSE,
+        paid_at TIMESTAMPTZ
+      )
+    `)
+
     const { rows } = await client.query('SELECT COUNT(*) FROM github_trending_ai')
     if (parseInt(rows[0].count) === 0) {
       for (const repo of trendingData) {

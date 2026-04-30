@@ -7,6 +7,7 @@ import GitHubRepos from './components/GitHubRepos'
 import WeatherWidget from './components/WeatherWidget'
 import Guestbook from './components/Guestbook'
 import ChatWidget from './components/ChatWidget'
+import SecretSection from './components/SecretSection'
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -231,6 +232,9 @@ export default function Home() {
         </p>
         <CalButton />
       </section>
+
+      {/* ── Secret Page ───────────────────────────────────────────────────── */}
+      <SecretSection />
 
       {/* ── Guestbook ─────────────────────────────────────────────────────── */}
       <Guestbook />
