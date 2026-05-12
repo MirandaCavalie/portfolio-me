@@ -122,7 +122,7 @@ export default function Home() {
                 Email
               </a>
               <a
-                href="/Miranda_Cavalie_Resume.pdf"
+                href="/portfolio-me/Miranda_Cavalie_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-black transition-colors flex items-center gap-1.5"
@@ -139,7 +139,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <Image src="/images/photo_me.jpeg" alt="Miranda Cavalie" width={200} height={200} className="rounded-full object-cover w-32 h-32 sm:w-48 sm:h-48" />
+            <Image src="/portfolio-me/images/photo_me.jpeg" alt="Miranda Cavalie" width={200} height={200} className="rounded-full object-cover w-32 h-32 sm:w-48 sm:h-48" />
           </div>
         </div>
       </section>
