@@ -1,6 +1,6 @@
 {
   "name": "miranda-portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,19 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.91.1",
     "@calcom/embed-react": "^1.5.3",
     "next": "14.2.29",
-    "next-auth": "^4.24.14",
-    "pg": "^8.20.0",
     "react": "^18",
-    "react-dom": "^18",
-    "recharts": "^3.8.1",
-    "stripe": "^22.1.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/pg": "^8.20.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",

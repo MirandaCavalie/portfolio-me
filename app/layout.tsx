@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
-import SessionProviderWrapper from './components/SessionProviderWrapper'
-import Navbar from './components/Navbar'
 
 const mono = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -36,10 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${mono.variable} ${sans.variable}`}>
       <body className="bg-white text-black font-sans antialiased">
-        <SessionProviderWrapper>
-          <Navbar />
-          {children}
-        </SessionProviderWrapper>
+        {children}
       </body>
     </html>
   )
