@@ -171,7 +171,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    role: 'Data Analyst',
+    role: 'Data Engineer',
     company: 'Kriptos',
     description: 'AI data classification for enterprise security. $4.9M raised.',
     period: 'May 2025 – Present',
